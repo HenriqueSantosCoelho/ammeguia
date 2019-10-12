@@ -6,15 +6,22 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+
 @RestController
 @RequestMapping("usuario")
 public class UsuarioResource {
     @Autowired
     private UsuarioRepository rep;
 
+
+
     @PostMapping("cadastrar")
     @ResponseStatus(HttpStatus.CREATED)
-    private Usuario cadastrar(@RequestBody Usuario usuario){
+    public Usuario cadastrar(@RequestBody Usuario usuario){
+        LocalDate a = LocalDate.now();
+        usuario.setData(a);
         return rep.save(usuario);
     }
 
