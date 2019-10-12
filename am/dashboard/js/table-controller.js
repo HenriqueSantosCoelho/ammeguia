@@ -9,17 +9,13 @@ app.filter('beginning_data', function() {
     }
 });
 app.controller('controller', function($scope, $http, $timeout) {
-    $http({
-        method:'GET',
-        url:'http://localhost:8080/usuario/listar'
-    }).then(function(response){
+    $http.get('http://localhost:8080/usuario/listar').success(function(user_data) {
         $scope.file = user_data;
         $scope.current_grid = 1;
         $scope.data_limit = 10;
         $scope.filter_data = $scope.file.length;
         $scope.entire_user = $scope.file.length;
     });
-    
     $scope.page_position = function(page_number) {
         $scope.current_grid = page_number;
     };
