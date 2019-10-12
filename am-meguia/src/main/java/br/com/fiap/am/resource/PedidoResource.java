@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDate;
 import java.util.List;
 
 @RestController
@@ -25,6 +26,8 @@ public class PedidoResource {
     @PostMapping("cadastrar")
     @ResponseStatus(HttpStatus.CREATED)
     public Pedido cadastrar(@RequestBody Pedido pedido){
+        LocalDate a = LocalDate.now();
+        pedido.setData(a);
         return rep.save(pedido);
     }
 }

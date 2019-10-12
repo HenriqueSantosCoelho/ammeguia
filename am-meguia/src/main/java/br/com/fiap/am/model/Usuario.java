@@ -31,6 +31,17 @@ public class Usuario {
     @Column(name = "ds_email")
     private String email;
 
+    @Column(name="is_deficiente")
+    private boolean deficiente;
+
+    public boolean isDeficiente() {
+        return deficiente;
+    }
+
+    public void setDeficiente(boolean deficiente) {
+        this.deficiente = deficiente;
+    }
+
     @Column(name = "ds_endereco")
     private String endereco;
 

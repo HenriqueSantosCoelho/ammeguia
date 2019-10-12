@@ -6,6 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDate;
+import java.util.List;
+
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
 @RequestMapping(value = "sugestao",method = RequestMethod.OPTIONS)
@@ -17,6 +20,14 @@ public class SugestaoResource {
     @PostMapping("cadastrar")
     @ResponseStatus(HttpStatus.CREATED)
     public Sugestao cadastrar(@RequestBody Sugestao sugestao){
+        LocalDate a = LocalDate.now();
+        sugestao.setData(a);
         return rep.save(sugestao);
+    }
+
+    @CrossOrigin
+    @GetMapping("listar")
+    public List<Sugestao> listar(){
+        return rep.findAll();
     }
 }
