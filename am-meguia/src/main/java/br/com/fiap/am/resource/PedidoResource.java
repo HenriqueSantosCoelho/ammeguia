@@ -2,13 +2,20 @@ package br.com.fiap.am.resource;
 
 
 import br.com.fiap.am.model.Pedido;
+import br.com.fiap.am.model.Produto;
 import br.com.fiap.am.repository.PedidoRepository;
+import br.com.fiap.am.repository.ProdutoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Example;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping(value="pedido",method = RequestMethod.OPTIONS)
@@ -16,6 +23,9 @@ public class PedidoResource {
 
     @Autowired
     private PedidoRepository rep;
+
+    @Autowired
+    private ProdutoRepository prod;
 
     @CrossOrigin
     @GetMapping("listar")
@@ -31,7 +41,8 @@ public class PedidoResource {
     @ResponseStatus(HttpStatus.CREATED)
     public Pedido cadastrar(@RequestBody Pedido pedido){
         LocalDate a = LocalDate.now();
-        pedido.setTotal((pedido.getQuantidade()*pedido.getProduto().getValor())+pedido.getFrete());
+        Produto p =  prod.findByCodigo(pedido.getProduto().getCodigo());
+        pedido.setTotal((pedido.getQuantidade()*p.getValor())+pedido.getFrete());
         pedido.setData(a);
         return rep.save(pedido);
     }
