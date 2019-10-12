@@ -42,6 +42,11 @@ public class PedidoResource {
     public List<Pedido> total(@RequestParam LocalDate start,@RequestParam LocalDate end){
         return rep.findByDataBetween(start,end);
     }
+    @CrossOrigin
+    @GetMapping("totalentre")
+    public double totalEntreDatas(@RequestParam LocalDate start,@RequestParam LocalDate end){
+        return rep.sumByDataBetween(start,end);
+    }
 
 
     @PostMapping("cadastrar")

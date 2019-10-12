@@ -10,6 +10,8 @@ import java.util.List;
 public interface PedidoRepository extends JpaRepository<Pedido,Integer> {
     @Query("SELECT SUM(m.total) FROM Pedido m")
     double sumTotal();
+    @Query("SELECT SUM(m.total) FROM Pedido m WHERE m.data BETWEEN ?1 AND ?2")
+    double sumByDataBetween(LocalDate start, LocalDate end);
 
     List<Pedido> findByDataBetween(LocalDate start, LocalDate end);
 }
