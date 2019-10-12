@@ -9,7 +9,7 @@ app.filter('beginning_data', function() {
     }
 });
 app.controller('controller', function($scope, $http, $timeout) {
-    $http.get('http://localhost:8080/usuario/listar').success(function(user_data) {
+    $http.get('https://serene-thicket-17017.herokuapp.com/usuario/listar').success(function(user_data) {
         $scope.file = user_data;
         $scope.current_grid = 1;
         $scope.data_limit = 10;

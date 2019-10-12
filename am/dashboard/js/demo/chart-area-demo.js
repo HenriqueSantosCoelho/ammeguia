@@ -16,14 +16,14 @@ atualizarDados();
 function atualizarDados(){
   $http({
     method: 'GET',
-    url:'http://localhost:8080/pedido/listar'
+    url:'https://serene-thicket-17017.herokuapp.com/pedido/listar'
   }).then(function(response){
       $scope.ganhos.order= response.data.length;
       atualizarGrafico()
   });
   $http({
     method: 'GET',
-    url:'http://localhost:8080/pedido/totalentre?start=30/09/2019&end=01/11/2019'
+    url:'https://serene-thicket-17017.herokuapp.com/pedido/totalentre?start=30/09/2019&end=01/11/2019'
   }).then(function(response){
       $scope.ganhos.monthly= response.data;
       $scope.ganhos.target.total = calcularMeta(response.data,500)
@@ -31,7 +31,7 @@ function atualizarDados(){
   });
   $http({
     method: 'GET',
-    url:'http://localhost:8080/pedido/totalentre?start=31/12/2018&end=01/01/2020'
+    url:'https://serene-thicket-17017.herokuapp.com/pedido/totalentre?start=31/12/2018&end=01/01/2020'
   }).then(function(response){
       $scope.ganhos.annual= response.data;
       atualizarGrafico()

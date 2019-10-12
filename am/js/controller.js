@@ -3,7 +3,7 @@ angular.module('app',[]).controller('controller',function($scope,$http){
     $scope.inserirMsg =function(msg){
         $http({
             method:"POST",
-            url:"http://localhost:8080/sugestao/cadastrar",
+            url:"https://serene-thicket-17017.herokuapp.com/sugestao/cadastrar",
             data:msg
         }).then(function(response){
             $scope.showMsg = true;
@@ -14,7 +14,7 @@ angular.module('app',[]).controller('controller',function($scope,$http){
 
     $http({
         method:"GET",
-        url:"http://localhost:8080/problema/listar"
+        url:"https://serene-thicket-17017.herokuapp.com/problema/listar"
     }).then(response => console.log(response.data.result));
 
 

@@ -6,7 +6,7 @@ Chart.defaults.global.defaultFontFamily = 'Nunito', '-apple-system,system-ui,Bli
     }
     $http({
       method:'GET',
-      url:'http://localhost:8080/problema/listar'
+      url:'https://serene-thicket-17017.herokuapp.com/problema/listar'
     }).then(function(response){
       response.data.forEach(p => {
         var tipo = p.tipo;
