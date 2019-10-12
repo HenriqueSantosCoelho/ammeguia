@@ -20,6 +20,7 @@ public class Pedido {
     @NotNull
     private Produto produto;
 
+
     private LocalDate data;
 
     @DecimalMax("30")
