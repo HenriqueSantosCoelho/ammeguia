@@ -5,13 +5,27 @@ var app =angular.module('dashboard',[]);
 
 app.controller('content',function($scope,$http){
   $scope.ganhos = {
-      monthly: 2000,
-      annual: 33000,
-      target:{
-          total: 50
-      },
-      order: 18
-  }
+    monthly: 2000,
+    annual: 33000,
+    target:{
+        total: 50
+    },
+    order: 18
+}
+  $http({
+    method: 'GET',
+    url:'http://localhost:8080/pedido/listar'
+  }).then(function(response){
+      $scope.ganhos = {
+        monthly: 2000,
+        annual: 33000,
+        target:{
+            total: 50
+        },
+        order: response.data.length
+    }
+  });
+  
   console.log($scope.ganhos)
   $scope.targetProgresBar = {
       width: $scope.ganhos.target.total +'%'

@@ -32,13 +32,13 @@ public class Usuario {
     private String email;
 
     @Column(name="is_deficiente")
-    private boolean deficiente;
+    private Boolean deficiente;
 
-    public boolean isDeficiente() {
+    public Boolean isDeficiente() {
         return deficiente;
     }
 
-    public void setDeficiente(boolean deficiente) {
+    public void setDeficiente(Boolean deficiente) {
         this.deficiente = deficiente;
     }
 

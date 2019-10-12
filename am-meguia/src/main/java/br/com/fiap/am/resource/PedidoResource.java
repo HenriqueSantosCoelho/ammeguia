@@ -22,11 +22,16 @@ public class PedidoResource {
     public List<Pedido> listar(){
         return rep.findAll();
     }
-
+    @CrossOrigin
+    @GetMapping("total")
+    public Double total(){
+        return rep.sumTotal();
+    }
     @PostMapping("cadastrar")
     @ResponseStatus(HttpStatus.CREATED)
     public Pedido cadastrar(@RequestBody Pedido pedido){
         LocalDate a = LocalDate.now();
+        pedido.setTotal((pedido.getQuantidade()*pedido.getProduto().getValor())+pedido.getFrete());
         pedido.setData(a);
         return rep.save(pedido);
     }
