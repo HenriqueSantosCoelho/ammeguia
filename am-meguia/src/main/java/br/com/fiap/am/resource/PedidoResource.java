@@ -24,7 +24,7 @@ public class PedidoResource {
 
     @PostMapping("cadastrar")
     @ResponseStatus(HttpStatus.CREATED)
-    private Pedido cadastrar(@RequestBody Pedido pedido){
+    public Pedido cadastrar(@RequestBody Pedido pedido){
         return rep.save(pedido);
     }
 }

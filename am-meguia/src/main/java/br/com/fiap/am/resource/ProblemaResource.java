@@ -17,7 +17,7 @@ public class ProblemaResource {
 
     @PostMapping("cadastrar")
     @ResponseStatus(HttpStatus.CREATED)
-    private Problema cadastrar(@RequestBody Problema problema){
+    public Problema cadastrar(@RequestBody Problema problema){
         return rep.save(problema);
     }
 

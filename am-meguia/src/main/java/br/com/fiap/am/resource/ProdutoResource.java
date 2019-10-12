@@ -23,7 +23,7 @@ public class ProdutoResource {
 
     @PostMapping("cadastrar")
     @ResponseStatus(HttpStatus.CREATED)
-    private Produto cadastrar(@RequestBody Produto produto){
+    public Produto cadastrar(@RequestBody Produto produto){
         return rep.save(produto);
     }
 }
