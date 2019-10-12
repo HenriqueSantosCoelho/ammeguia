@@ -1,18 +1,35 @@
-var app =angular.module('tables',['ui.bootstrap','ui.utils'])
-
-app.controller('table',function($scope,$http){
-    $scope.users = [];
-    console.log('teste')
+var app = angular.module('myApp', ['ui.bootstrap']);
+app.filter('beginning_data', function() {
+    return function(input, begin) {
+        if (input) {
+            begin = +begin;
+            return input.slice(begin);
+        }
+        return [];
+    }
+});
+app.controller('controller', function($scope, $http, $timeout) {
     $http({
-        method:"GET",
-        url:"http://localhost:8080/usuario/listar"
+        method:'GET',
+        url:'http://localhost:8080/usuario/listar'
     }).then(function(response){
-        console.log("response")
-        $scope.users = response.data;
+        $scope.file = user_data;
+        $scope.current_grid = 1;
+        $scope.data_limit = 10;
+        $scope.filter_data = $scope.file.length;
+        $scope.entire_user = $scope.file.length;
     });
-    $scope.dataTableOpt = {
-        //custom datatable options 
-       // or load data through ajax call also
-       "aLengthMenu": [[10, 50, 100,-1], [10, 50, 100,'All']],
-       };
+    
+    $scope.page_position = function(page_number) {
+        $scope.current_grid = page_number;
+    };
+    $scope.filter = function() {
+        $timeout(function() {
+            $scope.filter_data = $scope.searched.length;
+        }, 20);
+    };
+    $scope.sort_with = function(base) {
+        $scope.base = base;
+        $scope.reverse = !$scope.reverse;
+    };
 });
