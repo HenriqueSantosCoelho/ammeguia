@@ -3,8 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="bdbd8d9e-e841-4870-8dae-6b018caddda1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/fiap/am/repository/ProdutoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/fiap/am/repository/ProdutoRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/fiap/am/repository/PedidoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/fiap/am/repository/PedidoRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/com/fiap/am/resource/PedidoResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/fiap/am/resource/PedidoResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/fiap/am/repository/PedidoRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/fiap/am/repository/PedidoRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/fiap/am/repository/ProdutoRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/fiap/am/repository/ProdutoRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/fiap/am/resource/PedidoResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/fiap/am/resource/PedidoResource.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -57,7 +61,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1570839374507</updated>
-      <workItem from="1570839380593" duration="4882000" />
+      <workItem from="1570839380593" duration="6108000" />
     </task>
     <servers />
   </component>

@@ -37,11 +37,19 @@ public class PedidoResource {
     public Double total(){
         return rep.sumTotal();
     }
+    @CrossOrigin
+    @GetMapping("dataentre")
+    public List<Pedido> total(@RequestParam LocalDate start,@RequestParam LocalDate end){
+        return rep.findByDataBetween(start,end);
+    }
+
+
     @PostMapping("cadastrar")
     @ResponseStatus(HttpStatus.CREATED)
     public Pedido cadastrar(@RequestBody Pedido pedido){
         LocalDate a = LocalDate.now();
         Produto p =  prod.findByCodigo(pedido.getProduto().getCodigo());
+        pedido.setProduto(p);
         pedido.setTotal((pedido.getQuantidade()*p.getValor())+pedido.getFrete());
         pedido.setData(a);
         return rep.save(pedido);
