@@ -14,4 +14,6 @@ public interface PedidoRepository extends JpaRepository<Pedido,Integer> {
     double sumByDataBetween(LocalDate start, LocalDate end);
 
     List<Pedido> findByDataBetween(LocalDate start, LocalDate end);
+
+    List<Pedido> findByUsuario_Email(String email);
 }

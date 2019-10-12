@@ -28,7 +28,7 @@ public class Usuario {
 
     @Email(message = "E-mail inválido")
     @NotBlank(message = "Email obrigatório")
-    @Column(name = "ds_email")
+    @Column(name = "ds_email",unique = true)
     private String email;
 
     @Column(name="is_deficiente")

@@ -32,6 +32,12 @@ public class PedidoResource {
     public List<Pedido> listar(){
         return rep.findAll();
     }
+
+    @CrossOrigin
+    @GetMapping("listarporemailusuario")
+    public List<Pedido> buscarPorEmail(@RequestParam String email){
+        return rep.findByUsuario_Email(email);
+    }
     @CrossOrigin
     @GetMapping("total")
     public Double total(){

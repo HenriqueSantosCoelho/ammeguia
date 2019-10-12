@@ -3,7 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="bdbd8d9e-e841-4870-8dae-6b018caddda1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../am/dashboard/js/table-controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/../am/dashboard/js/table-controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/fiap/am/model/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/fiap/am/model/Usuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/fiap/am/repository/PedidoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/fiap/am/repository/PedidoRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/fiap/am/repository/UsuarioRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/fiap/am/repository/UsuarioRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/fiap/am/resource/PedidoResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/fiap/am/resource/PedidoResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/fiap/am/resource/UsuarioResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/fiap/am/resource/UsuarioResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/fiap/am/repository/PedidoRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/fiap/am/repository/PedidoRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/fiap/am/repository/UsuarioRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/fiap/am/repository/UsuarioRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/fiap/am/resource/PedidoResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/fiap/am/resource/PedidoResource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/fiap/am/resource/UsuarioResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/fiap/am/resource/UsuarioResource.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -57,7 +66,7 @@
       <option name="presentableId" value="Default" />
       <updated>1570839374507</updated>
       <workItem from="1570839380593" duration="9704000" />
-      <workItem from="1570901682732" duration="602000" />
+      <workItem from="1570901682732" duration="1669000" />
     </task>
     <servers />
   </component>

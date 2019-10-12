@@ -24,6 +24,12 @@ public class UsuarioResource {
     }
 
     @CrossOrigin
+    @GetMapping("usuarioporemail")
+    public Usuario buscarPorEmail(@RequestParam String email){
+        return rep.findByEmail(email);
+    }
+
+    @CrossOrigin
     @PostMapping("cadastrar")
     @ResponseStatus(HttpStatus.CREATED)
     public Usuario cadastrar(@RequestBody Usuario usuario){
@@ -31,6 +37,8 @@ public class UsuarioResource {
         usuario.setData(a);
         return rep.save(usuario);
     }
+
+
 
 
 }
