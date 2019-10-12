@@ -8,15 +8,22 @@ import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.List;
 
+@CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
-@RequestMapping("usuario")
+@RequestMapping(value="usuario",method = RequestMethod.OPTIONS)
 public class UsuarioResource {
     @Autowired
     private UsuarioRepository rep;
 
+    @CrossOrigin
+    @GetMapping("listar")
+    public List<Usuario> listar(){
+        return rep.findAll();
+    }
 
-
+    @CrossOrigin
     @PostMapping("cadastrar")
     @ResponseStatus(HttpStatus.CREATED)
     public Usuario cadastrar(@RequestBody Usuario usuario){
