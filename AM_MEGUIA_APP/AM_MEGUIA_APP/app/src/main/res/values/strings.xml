@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">meguia</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="problem_prompt">Escolha um problema</string>
+    <string-array name="opcoes">
+        <item>Buraco na Rua</item>
+        <item>Falta de Piso Tatil</item>
+        <item>Calçada Irregular</item>
+        <item>Rampa inadequada</item>
+        <item>Outro problema</item>
+    </string-array>
+    <string name="title_activity_guia">GuiaActivity</string>
+</resources>
