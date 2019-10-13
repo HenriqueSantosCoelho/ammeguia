@@ -1,0 +1,83 @@
+<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#E5E5E5">
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:src="@drawable/logo"
+        android:layout_gravity="center"/>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/arduinosensor"
+        android:paddingTop="45dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/round_button"
+            android:drawableTop="@drawable/negative"
+            android:gravity="center_horizontal|top"
+            android:textColor="#fff"
+            android:paddingTop="7dp"/>
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:gravity="center_horizontal|top"
+            android:text="1"
+            android:textSize="45dp"></TextView>
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/round_button"
+            android:drawableTop="@drawable/plus"
+            android:gravity="center_vertical|end"
+            
+            android:paddingTop="7dp"
+            android:textColor="#fff" />
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="R$ 30,00"
+        android:textAlignment="center"
+        android:textSize="35dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="15dp">
+    </TextView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:orientation="vertical"
+        android:paddingLeft="60dp"
+        android:paddingRight="60dp"
+        android:layout_gravity="bottom">
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="50dp"
+            android:background="#40baf7"
+            android:gravity="bottom"
+            android:letterSpacing="0.2"
+            android:padding="16dp"
+            android:text="Comprar Kit Sensor"
+            android:textAlignment="center"
+            android:textColor="#222"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</LinearLayout>

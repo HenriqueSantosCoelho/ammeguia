@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "398783468322",
+    "firebase_url": "https://projeto-meguia.firebaseio.com",
+    "project_id": "projeto-meguia",
+    "storage_bucket": "projeto-meguia.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:398783468322:android:6205ca2041863bf8f4cb7b",
+        "android_client_info": {
+          "package_name": "br.com.fiap.meguia"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "398783468322-hf9tlva761a3a92mj9ffqtj3sq15p0ue.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "br.com.fiap.meguia",
+            "certificate_hash": "ac5f0bf61898cb9cb2c3a7797a88a2ede5595bc7"
+          }
+        },
+        {
+          "client_id": "398783468322-a71pdm9pf063rtnf005d16h319tpea68.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCFUvfPRHC_UYwRbi05MjdBhZnPsKey6d0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "398783468322-a71pdm9pf063rtnf005d16h319tpea68.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
